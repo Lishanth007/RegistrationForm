@@ -1,11 +1,25 @@
 package com.example.demo.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "UserRegistration")
 public class User {
+	@Id
+	@GeneratedValue
+	private int sno;
+	
+	@Column(name = "fristname")
 	private String fname;
+	@Column(name = "lastname")
 	private String lname;
+	@Column(name = "email")
 	private String email;
+	@Column(name = "password")
 	private String passwd;
+	@Column(name = "DOB")
 	private String dob;
+	@Column(name = "gender")
 	private String gender;
 	public String getFname() {
 		return fname;
